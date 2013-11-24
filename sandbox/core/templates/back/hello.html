@@ -1,4 +1,12 @@
-<h1>Hello (Backアプリケーション)</h1>
+{% extends "back/_base.html" %}
+
+{% block title %}Back | Hello{% endblock title %}
+
+{% block main %}
+
+<h2>Hello (Backアプリケーション)</h2>
 <p>
     {{ back_hello_string }}
 </p>
+
+{% endblock main %}

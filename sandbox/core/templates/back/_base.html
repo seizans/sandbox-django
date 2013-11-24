@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}個別設定がないときに出すタイトル{% endblock title %}</title>
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li>ヘッダー1</li>
+            <li>ヘッダー2</li>
+            <li>ヘッダー3</li>
+        </ul>
+    </div>
+
+    <div id="main">
+        {% block main %}
+        {% endblock main %}
+    </div>
+</body>
+
+</html>

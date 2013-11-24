@@ -1,4 +1,12 @@
-<h1>HELLO</h1>
+{% extends "store/_base.html" %}
+
+{% block title %}Store | Hello{% endblock title %}
+
+{% block main %}
+
+<h2>Hello ページ</h2>
 <p>
     {{ from_hello_view }}
 </p>
+
+{% endblock main %}

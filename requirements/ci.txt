@@ -1,0 +1,6 @@
+-r _base.txt
+django-coverage>=1.2.4
+django-nose>=1.2
+flake8>=2.1.0
+mock>=1.0.1
+MySQL-python>=1.2.4

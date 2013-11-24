@@ -1,0 +1,4 @@
+-r _base.txt
+django-redis-cache==0.10.0
+django-redis-sessions==0.4.0
+MySQL-python==1.2.4

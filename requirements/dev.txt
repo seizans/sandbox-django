@@ -1,2 +1,2 @@
--r pip_requirements.txt
+-r _base.txt
 django-debug-toolbar>=0.11.0

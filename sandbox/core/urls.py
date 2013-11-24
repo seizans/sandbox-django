@@ -5,7 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^app1/', include('app1.urls')),
+    url(r'^store/', include('store.urls')),
     # Examples:
     # url(r'^$', 'sandbox.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),

@@ -3,3 +3,7 @@
 from .base import *  # NOQA
 
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  # 30日間
+
+INSTALLED_APPS += (
+    'store',
+)

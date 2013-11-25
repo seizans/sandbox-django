@@ -1,7 +1,6 @@
 # coding=utf8
 # 全アプリ、全環境に共通の設定
 INSTALLED_APPS = (
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

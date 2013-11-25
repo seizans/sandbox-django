@@ -1,6 +1,6 @@
 # coding=utf8
 # storeアプリケーション(表側)に共通の設定
-from .base import *  # NOQA
+from ._base import *  # NOQA
 
 IS_FRONT = True  # 表側アプリか管理アプリか
 

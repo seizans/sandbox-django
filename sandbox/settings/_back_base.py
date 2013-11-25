@@ -1,6 +1,6 @@
 # coding=utf8
 # backアプリケーション(管理用)に共通の設定
-from .base import *  # NOQA
+from ._base import *  # NOQA
 
 IS_FRONT = False  # 表側アプリか管理アプリか
 

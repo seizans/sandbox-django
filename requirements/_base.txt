@@ -1,2 +1,4 @@
 Django==1.6
+elasticsearch
 redis==2.8.0
+git+https://github.com/toastdriven/django-haystack.git

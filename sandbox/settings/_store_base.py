@@ -2,7 +2,7 @@
 # storeアプリケーション(表側)に共通の設定
 from ._base import *  # NOQA
 
-IS_FRONT = True  # 表側アプリか管理アプリか
+ROOT_URLCONF = 'core.store_urls'
 
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  # 30日間
 

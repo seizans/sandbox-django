@@ -1,0 +1,29 @@
+{% extends "store/_base.html" %}
+
+{% block title %}Store | Hello{% endblock title %}
+
+{% block main %}
+
+<h2>Note ページ</h2>
+
+<p>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" />
+</form>
+
+<table>
+{% for note in notes %}
+<tr>
+<td>{{ note.title }}</td>
+<td>{{ note.author }}</td>
+<td>{{ note.content }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</p>
+
+{% endblock main %}

@@ -1,5 +1,8 @@
 # coding=utf8
+
+from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 
 from core.models import Note
 from core.search_indexes import NoteIndex
@@ -17,3 +20,15 @@ def insert_note(request):
     NoteIndex().update_object(note2)
     d = {'from_hello_view': 'From Hello View'}
     return render(request, 'store/hello.html', d)
+
+
+class NoteView(CreateView):
+    model = Note
+    template_name = 'store/note.html'
+    success_url = reverse_lazy('note')
+
+    def get_context_data(self, **kwargs):
+        context = super(NoteView, self).get_context_data(**kwargs)
+        context['notes'] = Note.objects.all()
+        return context
+note = NoteView.as_view()

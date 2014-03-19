@@ -8,6 +8,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'haystack',
+    'elasticstack',
     'core',
 )
 
@@ -37,8 +38,57 @@ STATIC_URL = '/static/'
 # haystack
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'ENGINE': 'elasticstack.backends.ConfigurableElasticSearchEngine',
         'URL': 'http://127.0.0.1:9200/',
         'INDEX_NAME': 'sandbox',
+    },
+}
+ELASTICSEARCH_DEFAULT_ANALYZER = 'kuromoji_analyzer'
+ELASTICSEARCH_INDEX_SETTINGS = {
+    'settings': {
+        "analysis": {
+            "analyzer": {
+                "kuromoji_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "kuromoji_tokenizer",
+                    "filter": "lowercase",
+                },
+                "ngram_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "lowercase",
+                    "filter": ["haystack_ngram"],
+                },
+                "edgengram_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "lowercase",
+                    "filter": ["haystack_edgengram"],
+                }
+            },
+            "tokenizer": {
+                "haystack_ngram_tokenizer": {
+                    "type": "nGram",
+                    "min_gram": 3,
+                    "max_gram": 15,
+                },
+                "haystack_edgengram_tokenizer": {
+                    "type": "edgeNGram",
+                    "min_gram": 2,
+                    "max_gram": 15,
+                    "side": "front",
+                },
+            },
+            "filter": {
+                "haystack_ngram": {
+                    "type": "nGram",
+                    "min_gram": 3,
+                    "max_gram": 15,
+                },
+                "haystack_edgengram": {
+                    "type": "edgeNGram",
+                    "min_gram": 5,
+                    "max_gram": 15,
+                },
+            },
+        },
     },
 }

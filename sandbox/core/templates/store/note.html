@@ -24,6 +24,18 @@
 {% endfor %}
 </table>
 
+<hr>
+
+<table>
+{% for n in query %}
+<tr>
+<td>{{ n.title }}</td>
+<td>{{ n.author }}</td>
+<td>{{ n.content }}</td>
+</tr>
+{% endfor %}
+</table>
+
 </p>
 
 {% endblock main %}

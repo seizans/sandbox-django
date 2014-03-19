@@ -3,6 +3,7 @@
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
+from haystack.query import SearchQuerySet
 
 from core.models import Note
 from core.search_indexes import NoteIndex
@@ -30,5 +31,6 @@ class NoteView(CreateView):
     def get_context_data(self, **kwargs):
         context = super(NoteView, self).get_context_data(**kwargs)
         context['notes'] = Note.objects.all()
+        context['query'] = SearchQuerySet().models(Note).filter(title=u'定食')
         return context
 note = NoteView.as_view()

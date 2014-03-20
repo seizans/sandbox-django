@@ -8,8 +8,14 @@ from haystack.query import SearchQuerySet
 from core.models import Note
 from core.search_indexes import NoteIndex
 
+from .tasks import add
+
 
 def hello(request):
+    result = add.delay(3, 8)
+    while not result.ready():
+        print 'hoge'
+    print result.get()
     d = {'from_hello_view': 'From Hello View'}
     return render(request, 'store/hello.html', d)
 

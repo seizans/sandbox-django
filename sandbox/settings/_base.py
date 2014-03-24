@@ -9,6 +9,7 @@ INSTALLED_APPS = (
 
     'haystack',
     'elasticstack',
+    'celery_haystack',
     'core',
 )
 
@@ -36,6 +37,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # haystack
+HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'elasticstack.backends.ConfigurableElasticSearchEngine',

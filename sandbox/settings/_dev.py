@@ -28,7 +28,7 @@ INSTALLED_APPS_PLUS = (
 
 
 # Celery
-BROKER_URL = 'redis://localhost:6379/0'
+BROKER_URL = 'redis://localhost'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_BACKEND = 'redis'
 CELERY_RESULT_SERIALIZER = 'json'

@@ -97,3 +97,7 @@ ELASTICSEARCH_INDEX_SETTINGS = {
 
 # For tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=store',
+]

@@ -94,3 +94,6 @@ ELASTICSEARCH_INDEX_SETTINGS = {
         },
     },
 }
+
+# For tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'

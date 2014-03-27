@@ -41,7 +41,7 @@ HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'elasticstack.backends.ConfigurableElasticSearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
+        'URL': '127.0.0.1:9200',
         'INDEX_NAME': 'sandbox',
     },
 }

@@ -11,4 +11,5 @@ test:
     - flake8 sandbox
   override:
     - python sandbox/manage.py test core store
-    - mv cover $CIRCLE_ARTIFACTS
+  post:
+    - mv cover $CIRCLE_ARTIFACTS/

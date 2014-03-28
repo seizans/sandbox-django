@@ -23,7 +23,7 @@ DATABASES = {
 
 
 INSTALLED_APPS_PLUS = (
-    #'debug_toolbar',
+    'debug_toolbar',
 )
 
 

@@ -23,6 +23,6 @@ class Staff(models.Model):
         db_table = 'staff'
     name = models.CharField(max_length=100)
     belong = models.OneToOneField('Company')
-    #belong = models.ForeignKey('Company')
+    # belong = models.ForeignKey('Company')
 
     company_name = models.CharField(max_length=100)

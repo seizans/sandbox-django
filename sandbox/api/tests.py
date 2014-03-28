@@ -37,7 +37,7 @@ class NotesTest(JsonSchemaTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertSchema(schema, response.content)
         self.assertEqual(response['Content-Type'], 'application/json')
-        #print response.content
+        # print response.content
         data = json.loads(response.content)
         jsonschema.validate(data, schema)
 
@@ -57,6 +57,6 @@ class Notes2Test(JsonSchemaTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertSchema(schema, response.content)
         self.assertEqual(response['Content-Type'], 'application/json')
-        #print response.content
+        # print response.content
         data = json.loads(response.content)
         jsonschema.validate(data, schema)

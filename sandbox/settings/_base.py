@@ -96,7 +96,6 @@ ELASTICSEARCH_INDEX_SETTINGS = {
 }
 
 # For tests
-# TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--cover-html',

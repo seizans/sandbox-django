@@ -12,4 +12,4 @@ test:
   override:
     - python sandbox/manage.py test core store
   post:
-    - mv cover $CIRCLE_ARTIFACTS/
+    - mv cover $CIRCLE_ARTIFACTS

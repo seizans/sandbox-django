@@ -1,6 +1,7 @@
 -e git://github.com/django/django.git@dda6224459ed843dfd63e85729613fcc60ce925f#egg=Django-dev
 celery>=3.1
 celery-haystack>=0.7
+djangorestframework
 elasticsearch>=1.0.0
 elasticstack>=0.0.6
 jsonschema

@@ -12,8 +12,8 @@ router.register(r'notes', NoteViewSet)
 
 urlpatterns = patterns(
     'api.views',
-    # url('^notes$', 'notes'),
-    # url('^notes2$', 'notes2'),
+    url('^notes$', 'notes'),
+    url('^notes2$', 'notes2'),
 
     url('^rest/', include(router.urls)),
     url('^auth/', include('rest_framework.urls', namespace='rest_framework')),

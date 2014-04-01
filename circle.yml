@@ -9,7 +9,5 @@ dependencies:
 test:
   pre:
     - flake8 sandbox
-  override:
-    - python sandbox/manage.py test core store
   post:
-    - mv cover $CIRCLE_ARTIFACTS
+    - mv index.html $CIRCLE_ARTIFACTS

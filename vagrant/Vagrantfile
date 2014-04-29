@@ -16,5 +16,6 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "nginx/", "/home/vagrant/synced/nginx", create: true
   config.vm.provision "docker" do |docker|
     docker.build_image "/home/vagrant/synced/nginx", args: "-t seizans/nginx"
+    docker.run "seizans/nginx", args: "-P"
   end
 end
